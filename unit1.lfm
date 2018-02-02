@@ -1,0 +1,96 @@
+object Form1: TForm1
+  Left = 298
+  Height = 448
+  Top = 188
+  Width = 577
+  Caption = 'SPIFlash_FlashUploader'
+  ClientHeight = 448
+  ClientWidth = 577
+  LCLVersion = '1.6.0.4'
+  object BitBtn1: TBitBtn
+    Left = 16
+    Height = 30
+    Top = 8
+    Width = 75
+    Caption = 'Open'
+    OnClick = BitBtn1Click
+    TabOrder = 0
+  end
+  object StaticText1: TStaticText
+    Left = 21
+    Height = 17
+    Top = 48
+    Width = 539
+    Caption = 'Choose File...'
+    TabOrder = 1
+  end
+  object BitBtn2: TBitBtn
+    Left = 104
+    Height = 30
+    Top = 8
+    Width = 75
+    Caption = 'Write'
+    Enabled = False
+    OnClick = BitBtn2Click
+    TabOrder = 2
+  end
+  object Memo1: TMemo
+    Left = 16
+    Height = 288
+    Top = 112
+    Width = 550
+    Lines.Strings = (
+      'This is uploader works on 57600 baud rates.'
+    )
+    TabOrder = 3
+  end
+  object StaticText2: TStaticText
+    Left = 21
+    Height = 17
+    Top = 80
+    Width = 539
+    Caption = 'In wating'
+    TabOrder = 4
+  end
+  object StaticText3: TStaticText
+    Left = 441
+    Height = 17
+    Top = 9
+    Width = 125
+    Alignment = taRightJustify
+    Caption = '(C)VIOLONIX inc. 2018'
+    TabOrder = 5
+  end
+  object StaticText4: TStaticText
+    Left = 420
+    Height = 17
+    Top = 24
+    Width = 146
+    Alignment = taRightJustify
+    Caption = 'sendel2000@hotbox.ru'
+    TabOrder = 6
+  end
+  object IdDecoderMIME1: TIdDecoderMIME
+    FillChar = '='
+    left = 24
+    top = 112
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 'FlashUploader (*.sfd)|*.sfd'
+    left = 72
+    top = 112
+  end
+  object LazSerial1: TLazSerial
+    Active = False
+    BaudRate = br_57600
+    DataBits = db8bits
+    Parity = pNone
+    FlowControl = fcNone
+    StopBits = sbOne
+    Device = 'COM4'
+    RcvLineCRLF = False
+    OnRxData = LazSerial1RxData
+    left = 24
+    top = 160
+  end
+end
