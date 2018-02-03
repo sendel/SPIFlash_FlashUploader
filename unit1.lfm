@@ -70,11 +70,6 @@ object Form1: TForm1
     Caption = 'sendel2000@hotbox.ru'
     TabOrder = 6
   end
-  object IdDecoderMIME1: TIdDecoderMIME
-    FillChar = '='
-    left = 24
-    top = 112
-  end
   object OpenDialog1: TOpenDialog
     Filter = 'FlashUploader (*.sfd)|*.sfd'
     left = 72

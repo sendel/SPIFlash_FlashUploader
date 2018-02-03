@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Buttons,
-  StdCtrls, IdCoderMIME, LazSerial, base64, crt;
+  StdCtrls, LazSerial, base64, crt;
 
 type
 
@@ -15,7 +15,6 @@ type
   TForm1 = class(TForm)
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
-    IdDecoderMIME1: TIdDecoderMIME;
     LazSerial1: TLazSerial;
     Memo1: TMemo;
     OpenDialog1: TOpenDialog;

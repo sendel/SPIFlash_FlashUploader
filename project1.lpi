@@ -28,16 +28,13 @@
         <FormatVersion Value="1"/>
       </local>
     </RunParams>
-    <RequiredPackages Count="3">
+    <RequiredPackages Count="2">
       <Item1>
         <PackageName Value="LazSerialPort"/>
       </Item1>
       <Item2>
-        <PackageName Value="indylaz"/>
-      </Item2>
-      <Item3>
         <PackageName Value="LCL"/>
-      </Item3>
+      </Item2>
     </RequiredPackages>
     <Units Count="2">
       <Unit0>
@@ -62,7 +59,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="C:\lazarus\components\ideintf\;F:\Lazarus_VCL\indy-10.2.0.3\fpc\;F:\Lazarus_VCL\indy-10.2.0.3\lazarus\"/>
+      <OtherUnitFiles Value="C:\lazarus\components\ideintf\"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>
