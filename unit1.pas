@@ -25,6 +25,7 @@ type
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure LazSerial1RxData(Sender: TObject);
   private
@@ -162,9 +163,10 @@ end;
 
 procedure TForm1.BitBtn2Click(Sender: TObject);
 begin
-       //sendtoserial();
   AR_Status:=0;
   CurrentPage:=0;
+
+  LazSerial1.ShowSetupDialog;
   LazSerial1.Open;
   StaticText2.Caption:='Connection...';
   Memo1.Append(StaticText2.Caption);
@@ -173,6 +175,11 @@ end;
 procedure TForm1.BitBtn3Click(Sender: TObject);
 begin
 
+end;
+
+procedure TForm1.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+  if LazSerial1.Active then LazSerial1.Close;
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);

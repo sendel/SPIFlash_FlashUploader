@@ -150,7 +150,6 @@ void loop()
             break;
           case 'D': // Download page
             while (Serial.available()<4) {};
-            while (Serial.available()<4) {};
             Serial.readBytes(vbuf, 4);
             page=(long(vbuf[3])<<24)+(long(vbuf[2])<<16)+(long(vbuf[1])<<8)+vbuf[0];
             delay(50);
